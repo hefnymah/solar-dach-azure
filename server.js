@@ -16,7 +16,7 @@ app.get("/api/getPolygonFeatures/:id", CheckKey, getPolygonFeatures);
 app.get("/api/getPointFeatures/:id", CheckKey, getPointFeatures);
 app.get("/api/getMonthlyData/:id", CheckKey, getMonthlyData);
 mongoose.connect(process.env.URI).then(() => {
-  PORT = process.env.PORT || 4000;
+  PORT = 443;
   app.listen(PORT, () => {
     console.log(
       "connected to the db and listening at port : ",
