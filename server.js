@@ -12,6 +12,7 @@ const { CheckKey } = require("./Middleware/CheckKey");
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.get("/",(req,res)=>{res.send("hello world");});
 app.get("/api/getPolygonFeatures/:id", CheckKey, getPolygonFeatures);
 app.get("/api/getPointFeatures/:id", CheckKey, getPointFeatures);
 app.get("/api/getMonthlyData/:id", CheckKey, getMonthlyData);
